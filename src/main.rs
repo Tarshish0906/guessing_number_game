@@ -1,7 +1,14 @@
+extern crate rand;
+
+use rand::Rng;
 use std::io;
 
 fn main() {
     println!("数を当ててごらん");
+
+    let secret_number = rand::thread_rng().gen_range(1, 101);
+
+    println!("秘密の数字は... {}", secret_number);
 
     println!("予想 =");
 
